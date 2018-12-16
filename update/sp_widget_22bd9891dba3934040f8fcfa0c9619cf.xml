@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+		$scope.userID = $scope.user.sys_id;
+	
+
+
+	c.click = function(category,short_description,description,employee,created,id){
+		c.data.category = category;
+		c.data.short_description = short_description;
+		c.data.description = description;
+		c.data.employee = employee;
+		c.data.created = created;
+
+	$scope.isSelected = id;
+	}
+	
+	$scope.isSelected = null;
+	
+	
+
+	
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.body{
+  color:#000;
+}
+
+.left{
+float:left;
+  width:40%
+}
+@media only screen and (max-width:1500px){
+  .left{
+    width:95%;
+    float:none;
+  }
+}
+
+@media print
+  {
+    .no-print, no-print *{
+      display: none !important;
+    }
+    @page {size: A4 landscape; }
+  }
+
+.avatar-small-medium{
+  height:30px;
+}
+
+.container{
+  width: auto;
+  height:auto;
+  margin: auto;
+  border: 1px solid purple;
+  border-radius:6px;
+  margin-top: 10px;
+  padding 10px;
+  min-width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+.selected {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 215, 0, 0.69);
+}
+
+.header{
+  padding: 10px;
+ font-size:3.1em; 
+}
+.red{
+  color:red;
+}
+
+#certification{
+  z-index:1;
+  position: fixed;
+  right:5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+@media only screen and (max-width:1500px){
+  #certification{
+    padding:0;
+    float:none;
+    position: absolute;
+    right:auto;
+    margin:auto;
+  }
+}
+
+.category{
+  position: absolute;
+  left: 0;
+    top: 44%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.name{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.text{
+    position: absolute;
+    margin-left:40px;
+    top: 60%;
+    width: 90%;
+    text-align: center;
+    font-size: 16px;
+}
+.pic{
+  height:50px;
+  width:50px;
+  background-color:purple;
+}
+
+
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>my_kudos</id>
+        <internal>false</internal>
+        <link/>
+        <name>My Kudos </name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+var get = new x_sthc_kudos.kudos();
+data.kudos = [];
+data.kudos = get.getMyKudos();
+	var string = JSON.stringify(data.kudos);
+	var parser = new global.JSONParser();
+	var parsedData = parser.parse(string);
+	for(var i=0;i<1;i++){
+		data.category = parsedData[i].category;
+		data.short_description = parsedData[i].short_description;
+		data.description = parsedData[i].description;
+		data.employee = parsedData[i].employee;
+		
+		data.created = parsedData[i].created;	
+		
+	}
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-07-25 21:28:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>22bd9891dba3934040f8fcfa0c9619cf</sys_id>
+        <sys_mod_count>259</sys_mod_count>
+        <sys_name>My Kudos </sys_name>
+        <sys_package display_value="Kudos" source="x_sthc_kudos">77c31499db63934040f8fcfa0c961910</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Kudos">77c31499db63934040f8fcfa0c961910</sys_scope>
+        <sys_update_name>sp_widget_22bd9891dba3934040f8fcfa0c9619cf</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-09-19 17:33:31</sys_updated_on>
+        <template><![CDATA[<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+
+<div class="body">
+
+  <div class="left no-print">
+  
+  
+<div class="container" ng-repeat="aKudos in data.kudos" ng-click="c.click(aKudos.category,aKudos.short_description,aKudos.description,aKudos.employee,aKudos.created,aKudos.id)" ng-class="{selected: aKudos.id == isSelected}">
+ <img src="trophy.png"height="100" width="100">
+    <span class="header"> You are <color class="red">Rockstar</color></span>
+    <br>
+    <h4><b>Recieved on: </b>{{aKudos.created}} </h4>
+    <h4><b>From: </b>{{aKudos.submitted_by}} </h4>
+    <h4><b> Short description: </b>{{aKudos.short_description}} </h4>
+    <h4><b>Description: </b>{{aKudos.description}}</h4>
+  </div>
+</div>
+<!--<sn-avatar class="avatar-extra-large pic" primary="userID" />-->
+  
+ <div id="certification">
+   <div class="link pointer no-print">
+     <a onclick="window.print();return false;">Print My Certificate</a>
+   </div>
+   <img src="cert.png">
+   <div class="category">
+     Kudos you are <color class="red">Rockstar</color> in <color class="red">{{data.category}}</color>
+   </div>
+   <div class="name">
+     {{data.employee}}
+    
+     <sn-avatar class="pic" primary="userID"/>
+    
+     
+     </div>
+    <div class="text">
+     {{data.short_description}}
+   <br>
+     {{data.description}}
+      <br>Recieved on {{data.created}}
+   </div>
+   
+   
+  </div> 
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

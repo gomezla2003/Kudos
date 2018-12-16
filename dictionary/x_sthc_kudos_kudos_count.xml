@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Kudos Count" max_length="40" name="x_sthc_kudos_kudos_count" type="collection">
+        <element label="Count" max_length="40" name="count" type="string"/>
+        <element label="Employee" max_length="32" name="employee" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="employee"/>
+        </index>
+    </element>
+</database>

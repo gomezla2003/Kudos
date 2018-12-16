@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_sthc_kudos.kudos</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>kudos</name>
+        <script><![CDATA[var kudos = Class.create();
+kudos.prototype = {
+    initialize: function() {
+    },
+
+	getMyKudos: function(){
+		var user = gs.getUserID();
+		var kudos=[];
+		var gr = new GlideRecord('x_sthc_kudos_kudos');
+		gr.addQuery('employee.sys_id',user);
+		gr.orderByDesc('sys_created_on');
+		gr.query();
+		while(gr.next()){
+			var aKudos = {};
+			aKudos.id = gr.getUniqueValue();
+			aKudos.employee = gr.getDisplayValue('employee');
+			aKudos.short_description = gr.getValue('short_description');
+			aKudos.description = gr.getValue('description');
+			aKudos.submitted_by = gr.getDisplayValue('submitted_by');
+			aKudos.category = gr.getDisplayValue('category');
+			aKudos.created = gr.getDisplayValue('sys_created_on');
+			kudos.push(aKudos);
+			
+		}
+		return (kudos);
+		
+		
+	},
+	
+		getKudos: function(){
+		var kudos=[];
+		var gr = new GlideRecord('x_sthc_kudos_kudos');
+		gr.orderByDesc('sys_created_on');
+		gr.query();
+		while(gr.next()){
+			var aKudos = {};
+			aKudos.employee = gr.getDisplayValue('employee');
+			aKudos.employeeID = gr.getValue('employee');
+			aKudos.short_description = gr.getValue('short_description');
+			aKudos.submitted_by = gr.getDisplayValue('submitted_by');
+			aKudos.submitted_byID = gr.getValue('submitted_by');
+			aKudos.category = gr.getDisplayValue('category');
+			aKudos.created = gr.getDisplayValue('sys_created_on');
+			kudos.push(aKudos);
+			
+		}
+		return (kudos);
+		
+	},
+	
+		getKudosUsers: function(){
+		var counts=[];
+		var gr = new GlideRecord('x_sthc_kudos_kudos_count');
+		gr.orderByDesc('count');
+		gr.query();
+		while(gr.next()){
+			var count = {};
+			count.count = gr.getDisplayValue('count');
+			count.employeeID = gr.getValue('employee');
+			count.employee = gr.getDisplayValue('employee');
+			counts.push(count);
+		}
+		return (counts);
+		
+	},
+	
+    type: 'kudos'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-07-25 23:17:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>9255bc1ddbe3934040f8fcfa0c9619c8</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>kudos</sys_name>
+        <sys_package display_value="Kudos" source="x_sthc_kudos">77c31499db63934040f8fcfa0c961910</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Kudos">77c31499db63934040f8fcfa0c961910</sys_scope>
+        <sys_update_name>sys_script_include_9255bc1ddbe3934040f8fcfa0c9619c8</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-09-19 17:21:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

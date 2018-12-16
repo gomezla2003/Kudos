@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_category">
+    <sc_category action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <entitlement_script/>
+        <header_icon/>
+        <homepage_image/>
+        <homepage_renderer display_value="Category Details">6bfb2caa3742300054b6a3549dbe5d2f</homepage_renderer>
+        <icon/>
+        <image/>
+        <location/>
+        <mobile_hide_description>false</mobile_hide_description>
+        <mobile_picture/>
+        <mobile_subcategory_render_type>list</mobile_subcategory_render_type>
+        <module/>
+        <order>0</order>
+        <parent/>
+        <roles/>
+        <sc_catalog/>
+        <show_in_cms>false</show_in_cms>
+        <sys_class_name>sc_category</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-07-25 20:57:22</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a0e69c5ddb63934040f8fcfa0c9619e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Employee Recognition</sys_name>
+        <sys_package display_value="Kudos" source="x_sthc_kudos">77c31499db63934040f8fcfa0c961910</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Kudos">77c31499db63934040f8fcfa0c961910</sys_scope>
+        <sys_update_name>sc_category_a0e69c5ddb63934040f8fcfa0c9619e0</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-07-25 20:57:22</sys_updated_on>
+        <title>Employee Recognition</title>
+    </sc_category>
+</record_update>

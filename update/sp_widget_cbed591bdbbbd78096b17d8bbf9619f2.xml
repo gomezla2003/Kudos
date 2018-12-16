@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[function($scope) {
+  /* widget controller */
+  var c = this;
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>#container{
+  position: relative;
+  width: 800px;
+  height: 300px;
+   border-style: groove;
+  border-width: 5px;
+  box-shadow: 10px 10px 5px gray;
+  margin-top:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.avatar{
+  position:absolute;
+  top:10px;
+  left:10px;
+  width:100px;
+  height:100px;
+}
+
+img{
+ position: absolute;
+  top: 10px;
+  left: 110px;
+}
+
+
+.name{
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  
+  font-size: 2em;
+ 
+}
+
+orange{
+  color:orange;
+}
+
+.right{
+ position:absolute;
+  top:10px;
+  width:100px;
+ word-wrap: break-word;
+  height: auto;
+  
+}
+  </css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link/>
+        <name>Kudos Hall Of Fame</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+var get = new x_sthc_kudos.kudos();
+	data.kudos = [];
+	data.kudos = get.getKudos();
+	data.count = [];
+	data.count = get.getKudosUsers();
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>LGOMEZ</sys_created_by>
+        <sys_created_on>2018-08-13 17:31:40</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cbed591bdbbbd78096b17d8bbf9619f2</sys_id>
+        <sys_mod_count>295</sys_mod_count>
+        <sys_name>Kudos Hall Of Fame</sys_name>
+        <sys_package display_value="Kudos" source="x_sthc_kudos">77c31499db63934040f8fcfa0c961910</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Kudos">77c31499db63934040f8fcfa0c961910</sys_scope>
+        <sys_update_name>sp_widget_cbed591bdbbbd78096b17d8bbf9619f2</sys_update_name>
+        <sys_updated_by>LGOMEZ</sys_updated_by>
+        <sys_updated_on>2018-09-20 20:34:43</sys_updated_on>
+        <template><![CDATA[<div id="container" ng-repeat="count in data.count">
+ <div class="kudos">
+   
+ 
+  <sn-avatar class="avatar" primary="count.employeeID" />
+      <img src="award.png">
+   
+   <div class="name">
+    <p>
+       {{count.employee}} recieved 7 <br>
+     Kudos and is <orange>the employee of<br>the year</orange>!
+     </p>
+   </div>
+     
+    <div class="right">
+      <div ng-if="count.employeeID == aKudos.employeeID" ng-repeat="aKudos in data.kudos">
+       
+       <li>{{aKudos.short_description}}</li>
+   </div>
+
+       
+   </div>
+ 
+    -->
+  
+</div> </div>]]></template>
+    </sp_widget>
+</record_update>

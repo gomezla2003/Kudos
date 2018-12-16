@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_sthc_kudos_employee_recognition" label="Good Catch" max_length="40" name="x_sthc_kudos_good_catch" type="collection"/>
+</database>

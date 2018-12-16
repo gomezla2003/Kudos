@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_sthc_kudos_employee_recognition" label="Kudos" max_length="40" name="x_sthc_kudos_kudos" type="collection">
+        <element choice="1" label="Category2" max_length="40" name="category2" type="string">
+            <choice>
+                <element label="A Rockstar" value="rockstar"/>
+                <element label="Creative" value="creative"/>
+                <element label="Organized" value="organized"/>
+            </choice>
+        </element>
+    </element>
+</database>

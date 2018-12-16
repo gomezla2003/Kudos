@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="category" table="x_sthc_kudos_employee_recognition" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Accountability</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:01:01</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>b0bcd4a9dbe3d34040f8fcfa0c9619aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:01:01</sys_updated_on>
+            <value>accountability</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Caring</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:00:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>55acd4a9dbe3d34040f8fcfa0c9619a5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:00:47</sys_updated_on>
+            <value>caring</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Excellence</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:01:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>43ccd4a9dbe3d34040f8fcfa0c9619af</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:01:28</sys_updated_on>
+            <value>excellence</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Integrity</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:00:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c18c94a9dbe3d34040f8fcfa0c9619e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:00:29</sys_updated_on>
+            <value>integrity</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Respect</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:01:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>7ddcd869dbe3d34040f8fcfa0c961955</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:01:39</sys_updated_on>
+            <value>respect</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>category</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Stewardship</label>
+            <language>en</language>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sequence/>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:01:15</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>84cc94a9dbe3d34040f8fcfa0c9619eb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:01:15</sys_updated_on>
+            <value>stewardship</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>category</element>
+            <name>x_sthc_kudos_employee_recognition</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>LGOMEZ</sys_created_by>
+            <sys_created_on>2018-07-26 16:00:29</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>3c9c9069dbe3d34040f8fcfa0c961998</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>category</sys_name>
+            <sys_package display_value="Kudos" source="x_sthc_kudos">77c31499db63934040f8fcfa0c961910</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Kudos">77c31499db63934040f8fcfa0c961910</sys_scope>
+            <sys_update_name>sys_choice_x_sthc_kudos_employee_recognition_category</sys_update_name>
+            <sys_updated_by>LGOMEZ</sys_updated_by>
+            <sys_updated_on>2018-07-26 16:00:29</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>
